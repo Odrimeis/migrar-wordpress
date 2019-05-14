@@ -1,0 +1,15 @@
+1- Instalar el plugin All-in-one Migrator (con la opción gratuita es suficiente) en la Web original y descargar una copia como Archivo. 
+
+2- Instalar el mismo plugin en la Web segundaria,(IMPORTANTE: para un mejor desarrollo y evitar complicaciones posteriores hacer la migración cuando el dominio sea el definitivo y esté el HTTPS puesto, en definitiva, el dominio que va a quedarse al final)
+
+2.1- En caso de instalar un dominio de prueba y después cambiar la dirección de las DNS del mismo habrán varios problemas con las URL ya que wordpress guarda la URl anterior en la Base de Datos. ¿Qué hacer entonces?
+
+Entrar en el panel de Wordpress y en Ajustes - General cambiar ambas URL antiguas por las definitivas. (hacer esto antes de cambiar donde apuntan las DNS del dominio, si no dará error el administrador de WP.)
+Si ya es demasiado tarde y hemos cambiado las DNS primero y nos aparece el error en el Administrador hay que dirigirse al CPanel y cambiar las url en la BBDD en estos dos apartados: 
+
+1	siteurl	https://tudominiodefinitivo.com	yes
+
+2	home	https://tudominiodefinitivo.com	yes
+
+Después, hemos de actualizar los Permal Links.
+Por último revisar las imágenes en la Web ya que Wordpress algunos temas pueden guardar urls antiguas en caché. Borrar todo el caché existente en caso de problemas
